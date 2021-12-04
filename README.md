@@ -17,9 +17,15 @@
 
 ## Usage
 
-1. Run proxy_server.py
-2. Edit client.py global variables to fit the server ip
-3. Run client.py
+> arp poisoning required - proxy server interface mac(which is listening on) should be the mapped to the gateway of the client
+
+1. Run proxy_server.py (machine 1)
+2. Edit client.py server_ip variable to choose which server you want to make https requests
+3. Run client.py (machine 2)
+
+## Important
+
+> The solution is build like **MITM** approach which receives the **traffic as is**
 
 ## Approach For Solution
 

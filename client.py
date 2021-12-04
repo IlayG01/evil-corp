@@ -8,7 +8,7 @@ Change Log –
 import threading
 from scapy_utils import https
 
-proxy_server_ip = '192.168.56.1'
+server_ip = '192.168.56.1'
 
 
 class Client:
@@ -17,7 +17,7 @@ class Client:
     def __init__(self, enc_format='utf-8'):
         self._enc_format = enc_format
 
-    def send_https(self, payload='x', ip=proxy_server_ip, dport=1337):
+    def send_https(self, payload='x', ip=server_ip, dport=443):
         payload = payload.encode(self._enc_format)
         https(payload, ip, dport)
 
