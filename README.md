@@ -34,19 +34,19 @@ Using wireshark, ill sniff my Wi-Fi interface and browse into the stack overflow
 lets filter and focus at the tcp stream between my computer and stackoverflow server. the communication between them
 starts with TCP handshake.
 
-- link to the stream image
+![alt text](https://github.com/IlayG01/evil-corp/blob/master/images/stackoverflow_tcp_stream.png)
 
 all the https requests happen above tcp protocol, so that handshake will happen every time we're accessing a site in the
 web. looking at the internet layer we can see the destination address for our requests - not coincidental, to the
 stackoverflow server.
 
-- link to my ping
-- link to the packet ipv4
+![alt text](https://github.com/IlayG01/evil-corp/blob/master/images/stackoverflow_ping.png)
+![alt text](https://github.com/IlayG01/evil-corp/blob/master/images/packet_ipv4_info.png)
 
 looking at the transport layer we can see that the destination port is 443, which known for purposes of secured web
 traffic, every https request will use this port as destination port.
 
-- link to the packet tcp
+![alt text](https://github.com/IlayG01/evil-corp/blob/master/images/packet_tcp_info.png)
 
 ---
 
